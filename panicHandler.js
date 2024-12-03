@@ -36,7 +36,7 @@ export const handlePanic = async () => {
         try {
             console.log(`Enviando mensagem para o número: ${contato.numeroComDdd}`);
             console.log(local);
-            const response = await axios.post('https://2bf1-2804-7d74-82-f900-712e-41ac-220b-2285.ngrok-free.app/message/sendText/Alerta', {
+            const response = await axios.post('link', {
                 number: contato.numeroComDdd,
                 textMessage: {
                     text: `${userMessage} \nLocalização: ${local}`
@@ -48,7 +48,7 @@ export const handlePanic = async () => {
                 }
             }, {
                 headers: {
-                    'apikey': 'B6D711FCDE4D4FD5936544120E713976'
+                    'apikey': 'Key'
                 }
             });
             console.log(`Mensagem enviada para ${contato.celular}:`, response.data);
